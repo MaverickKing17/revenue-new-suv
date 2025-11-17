@@ -8,7 +8,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img src="https://i.imgur.com/YOUR-LOGO-ID.png" alt="NewSUV.net" className="h-10" />
-          </div>
+          <img src="https://i.ibb.co/vx8KRhp/newsuv-logo.png" alt="NewSUV.net" className="h-10" />
           <nav className="hidden md:flex items-center gap-8">
             <a href="#calculators" className="text-gray-700 hover:text-red-500 transition-colors">Calculators</a>
             <a href="#about" className="text-gray-700 hover:text-red-500 transition-colors">About</a>
