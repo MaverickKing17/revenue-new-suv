@@ -1,46 +1,52 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
 
-export const Hero = () => {
+const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background z-10" />
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-highway-traffic-from-above-1945-large.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
 
-      {/* Hero Content */}
-      <div className="container relative z-20 mx-auto px-4 py-20 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-foreground">
-          Know Your Real Payment
-          <br />
-          <span className="text-primary">Before the Dealer Does</span>
+      {/* Dark Overlay (60-70% opacity as per PDF requirements) */}
+      <div className="absolute inset-0 bg-black/65" />
+
+      {/* Content Overlay - PRESERVE EXISTING DESIGN */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 max-w-7xl mx-auto">
+        
+        {/* Main Heading - EXACT EXISTING TEXT */}
+        <h1 className="text-center mb-6">
+          <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2">
+            Know Your Real Payment
+          </div>
+          <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-red-500">
+            Before the Dealer Does
+          </div>
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
+
+        {/* Subheading - PRESERVE EXISTING */}
+        <p className="text-white/90 text-xl md:text-2xl text-center max-w-3xl mb-4">
           Engineered Clarity. Zero Bias. Maximum Savings.
-          <br />
+        </p>
+        
+        <p className="text-white/70 text-lg text-center mb-10">
           Canada's Premium Real-Time Car Buying Calculator Suite
         </p>
-        <Button
-          size="lg"
-          className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-6 text-lg rounded-md shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse"
-        >
+
+        {/* CTA Button - PRESERVE EXISTING ORANGE COLOR */}
+        <button className="group bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-3">
           Start Calculating - It's Free
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+          <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+        </button>
       </div>
-    </section>
+    </div>
   );
 };
+
+export default Hero;
