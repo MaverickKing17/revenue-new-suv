@@ -7,7 +7,7 @@ const Index = () => {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="https://i.ibb.co/vx8KRhp/newsuv-logo.png" alt="NewSUV.net" className="h-10" />
+           <img src="https://i.postimg.cc/FzxFkDBD/Newsuv-net-brand-logos.png" alt="Newsuv.net" className="h-10 w-auto object-contain" width={160} height={40} loading="eager" referrerPolicy="no-referrer" />
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#calculators" className="text-gray-700 hover:text-red-500 transition-colors">Calculators</a>
