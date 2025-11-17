@@ -262,3 +262,73 @@ const Index = () => {
             {/* Legal & Compliance */}
             <div>
               <h3 className="text-white font-bold mb-4">Legal & Compliance</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Disclaimer</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">DMCA Policy</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Affiliate Disclosure</a></li>
+              </ul>
+            </div>
+
+            {/* Trust & Authority */}
+            <div>
+              <h3 className="text-white font-bold mb-4">Trust & Authority</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="hover:text-white transition-colors">How It Works</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Data Sources</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h3 className="text-white font-bold mb-4">Company</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Contact & Support</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+              </ul>
+            </div>
+
+            {/* Calculators */}
+            <div>
+              <h3 className="text-white font-bold mb-4">Calculators</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="hover:text-white transition-colors">Purchase Savings</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Lease vs Buy</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Auto Loan</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Operating Costs</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Blog & Insights</a></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Footer */}
+          <div className="mt-12 pt-8 border-t border-gray-800">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+              <div>
+                <h4 className="text-white font-semibold mb-2">Data Sources</h4>
+                <p>Tax rates: Canada Revenue Agency • Interest rates: Bank of Canada • Fuel economy: Natural Resources Canada</p>
+              </div>
+              <div>
+                <h4 className="text-white font-semibold mb-2">Privacy & Security</h4>
+                <p>Your calculations are private • No personal data stored • WCAG 2.1 AA compliant</p>
+              </div>
+              <div>
+                <h4 className="text-white font-semibold mb-2">Accuracy Notice</h4>
+                <p>Calculations are estimates. Tax rates correct as of 2025-01-15. Consult professionals before decisions.</p>
+              </div>
+            </div>
+            <div className="mt-8 text-center text-sm text-gray-500">
+              © 2025 NewSUV.net - Canada's Premium Automotive Calculator Suite<br />
+              CRA-level tax precision with Tesla-level interface polish
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
