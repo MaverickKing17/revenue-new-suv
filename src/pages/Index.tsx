@@ -3,20 +3,7 @@ import { ArrowRight, MapPin, Zap, Shield, FileText, TrendingUp, DollarSign, Gaug
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-           <img src="https://i.postimg.cc/FzxFkDBD/Newsuv-net-brand-logos.png" alt="Newsuv.net" className="h-10 w-auto object-contain" width={160} height={40} loading="eager" referrerPolicy="no-referrer" />
-          </div>
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#calculators" className="text-gray-700 hover:text-red-500 transition-colors">Calculators</a>
-            <a href="#about" className="text-gray-700 hover:text-red-500 transition-colors">About</a>
-            <a href="#resources" className="text-gray-700 hover:text-red-500 transition-colors">Resources</a>
-          </nav>
-        </div>
-      </header>
-
+      
       {/* Quick Calculator Access Bar */}
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center gap-6 overflow-x-auto">
