@@ -2,8 +2,7 @@
 import { useState } from "react";
 import NavLink from "./NavLink";
 
-const LOGO_URL =
-  "https://i.postimg.cc/FzxFkDBD/Newsuv-net-brand-logos.png";
+const LOGO_URL = "https://i.postimg.cc/FzxFkDBD/Newsuv-net-brand-logos.png";
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -12,11 +11,7 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         {/* Brand */}
-        <a
-          href="/"
-          className="mr-6 flex items-center gap-2"
-          aria-label="Newsuv.net home"
-        >
+        <a href="/" className="mr-6 flex items-center gap-2" aria-label="Newsuv.net home">
           <img
             src={LOGO_URL}
             alt="Newsuv.net"
@@ -25,6 +20,16 @@ export default function SiteHeader() {
             height={40}
             loading="eager"
             fetchPriority="high"
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              // If the external host blocks/404s, swap to a local copy.
+              // Add public/newsuv-logo.png to your repo for this fallback.
+              const img = e.currentTarget as HTMLImageElement;
+              if (img.dataset.fallbackLoaded !== "true") {
+                img.dataset.fallbackLoaded = "true";
+                img.src = "/newsuv-logo.png";
+              }
+            }}
           />
           <span className="sr-only">Newsuv.net</span>
         </a>
@@ -43,12 +48,7 @@ export default function SiteHeader() {
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
         >
-          <svg
-            className="h-5 w-5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-          >
+          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path strokeWidth="2" strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
